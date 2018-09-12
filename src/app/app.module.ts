@@ -11,13 +11,17 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginService } from './services/login.service';
 import { UserListService } from './services/service-user-list/user-list.service';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { UserByIdComponent } from './components/user-by-id/user-by-id.component';
+import { GetUserByIdService } from './services/service-get-user-by-id/get-user-by-id.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LoginComponent,
-    UserListComponent
+    UserListComponent,
+    UserByIdComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
   ],
   providers: [
     LoginService,
-    UserListService
+    UserListService,
+    GetUserByIdService
   ],
   bootstrap: [AppComponent]
 })

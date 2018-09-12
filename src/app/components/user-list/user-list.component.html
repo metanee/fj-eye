@@ -8,15 +8,16 @@
       <th scope="col">email</th>
       <th scope="col">firstName</th>
       <th scope="col">lastName</th>
+      <th scope="col">authorities</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor = "let user of userList">
-      <th scope="row">1</th>
       <td>{{user.id}}</td>
-      <td>{{user.email}}</td>
+      <td><a (click)="onSelect(user)" style="cursor:pointer">{{user.email}}</a></td>
       <td>{{user.firstName}}</td>
       <td>{{user.lastName}}</td>
+      <td>{{user.authorities[0].authority}}</td>
 
     </tr>
   </tbody>

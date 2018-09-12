@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../models/user';
+import {Router} from '@angular/router';
 import { UserListService } from '../../services/service-user-list/user-list.service';
+
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -8,12 +11,20 @@ import { UserListService } from '../../services/service-user-list/user-list.serv
 })
 export class UserListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'email', 'firstName', 'lastName'];
   private userList: User[];
+  private selectedUser : User;
+
 
   constructor(
     private userListService: UserListService,
+    private router: Router
   ) { }
+
+  onSelect(user: User) {
+    this.selectedUser = user;
+    this.router.navigate(['/viewUser', this.selectedUser.id]);
+    console.log(this.selectedUser.id);
+  }
 
   getUserList() {
     this.userListService.getUserList().subscribe(
