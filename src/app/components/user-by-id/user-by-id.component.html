@@ -1,3 +1,16 @@
-<p>
-  user-by-id works!
-</p>
+<form (ngSubmit)="onNewPayment()" method="post">
+    <div class="col-xs-6">
+        <label for="employee.id">employeeId</label>
+        <input type="text" name="id" id="{{employee.id}}" [value]="employee.id" readonly [(ngModel)]="employee.id" />
+      </div>
+    <div class="col-xs-6">
+      <label for="company.id">companyid</label>
+      <input type="text" name="company.id" id="{{company.id}}" [value]="company.id"  [(ngModel)]="employee.companyId" />
+    </div>
+    <div class="col-xs-6">
+        <label for="user.id">userid</label>
+        <input type="text" name="user.id"  id="userId" [value] ="user.id" [(ngModel)]="employee.userId" />
+    </div>
+      <button mat-raised-button type="submit" class="mat-primary">Add</button>
+
+</form>

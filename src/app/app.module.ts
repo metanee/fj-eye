@@ -13,6 +13,8 @@ import { UserListService } from './services/service-user-list/user-list.service'
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserByIdComponent } from './components/user-by-id/user-by-id.component';
 import { GetUserByIdService } from './services/service-get-user-by-id/get-user-by-id.service';
+import { CompanyService } from './services/service-company/company.service';
+
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { GetUserByIdService } from './services/service-get-user-by-id/get-user-b
   providers: [
     LoginService,
     UserListService,
-    GetUserByIdService
+    GetUserByIdService,
+    CompanyService
   ],
   bootstrap: [AppComponent]
 })
