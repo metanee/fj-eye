@@ -1,0 +1,24 @@
+<div class="table-responsive">
+
+  <table class="table">
+    <caption>List of users</caption>
+    <thead>
+      <tr>
+        <th scope="col">employeeId</th>
+        <th scope="col">userId</th>
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">authorities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let user of employeeList">
+        <td>{{user.employeeId}}</td>
+        <td>{{user.user.id}}</td>
+        <td>{{user.user.firstName}}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
+  </div>

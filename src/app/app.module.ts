@@ -14,6 +14,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserByIdComponent } from './components/user-by-id/user-by-id.component';
 import { GetUserByIdService } from './services/service-get-user-by-id/get-user-by-id.service';
 import { CompanyService } from './services/service-company/company.service';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import {EmployeeListService} from './services/service-employee-list/employee-list.service';
 
 
 
@@ -23,7 +25,8 @@ import { CompanyService } from './services/service-company/company.service';
     NavBarComponent,
     LoginComponent,
     UserListComponent,
-    UserByIdComponent
+    UserByIdComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { CompanyService } from './services/service-company/company.service';
     LoginService,
     UserListService,
     GetUserByIdService,
-    CompanyService
+    CompanyService,
+    EmployeeListService
   ],
   bootstrap: [AppComponent]
 })

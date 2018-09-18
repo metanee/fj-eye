@@ -1,5 +1,6 @@
 import {Employee} from '../models/employee';
 
+
 export class Company {
   public id: number;
   public firstName: string;

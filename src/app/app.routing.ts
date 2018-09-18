@@ -3,7 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {LoginComponent} from './components/login/login.component';
 import {UserListComponent} from './components/user-list/user-list.component';
 import {UserByIdComponent} from './components/user-by-id/user-by-id.component';
-
+import {EmployeeListComponent} from './components/employee-list/employee-list.component';
 const appRoutes: Routes = [
   {
       path : '',
@@ -21,6 +21,10 @@ const appRoutes: Routes = [
   {
     path : 'viewUser/:id',
     component: UserByIdComponent
+  },
+  {
+    path : 'employeeList',
+    component: EmployeeListComponent
   }
 ];
 
